@@ -26,14 +26,14 @@ public class Main {
     public static void main(String[] args) {
         try {
             Generator generator = new WorldGenerator(
-                    new CsvDecoder(new FileReader("/path/to/map")),	// Path to map descriptor
-                    new RandomStrategy(),				// Strategy used to place monsters
-                    10							// Number of monsters
+                    new CsvDecoder(new FileReader("/path/to/map")), // Path to map descriptor
+                    new RandomStrategy(),                           // Strategy used to place monsters
+                    10                                              // Number of monsters
             );
 
             GameManager manager = new GameManager(
-                    generator.generate(),				// Generated, parsed and validated world
-                    new CsvEncoder(new FileWriter("/path/to/result"))	// Path to resultant file
+                    generator.generate(),                             // Generated, parsed and validated world
+                    new CsvEncoder(new FileWriter("/path/to/result")) // Path to resultant file
             );
 
             
@@ -53,6 +53,7 @@ public class Main {
                     for (Monster monster : fight.getMonstersInvolved()) {
                         monsters += monster.getId() + " ";
                     }
+
                     System.out.println(city);
                     System.out.println(monsters);
                 }
@@ -71,4 +72,3 @@ public class Main {
         }
     }
 }
-
