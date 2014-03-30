@@ -44,7 +44,7 @@ public class Main {
             // Here 1000 is the maximum number of movements
             for (Integer i = 0; i < 1000; i++) {
                 // Start the party!
-                manager.walkToNeighborCityWithStrategy(strategy);
+                manager.walkToNeighborCityWithStrategy(walkStrategy);
                 List<FightResult> results = manager.dealWithFights(fightStrategy);
 
                 for (FightResult fight : results) {
