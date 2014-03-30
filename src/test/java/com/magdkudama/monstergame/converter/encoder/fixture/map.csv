@@ -1,0 +1,4 @@
+"A";"north=B";"east=C"
+"B";"south=A"
+"C";"west=A"
+"D"
